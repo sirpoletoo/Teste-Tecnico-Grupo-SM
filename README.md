@@ -37,3 +37,5 @@ Vary: Accept
 ## Pokemon Picture
 - https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/25.png
 
+## Interface Django
+- http://127.0.0.1:8000/api/treinadores/

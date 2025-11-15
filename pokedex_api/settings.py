@@ -76,8 +76,12 @@ WSGI_APPLICATION = 'pokedex_api.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'pokedex_db',        # Nome do DB
+        'USER': 'postgres',          # Usuário padrão do postgreSQL
+        'PASSWORD': '998743', 
+        'HOST': 'localhost',         # Endereço local do PostgreSQL
+        'PORT': '5432',              # Porta padrão do PostgreSQL
     }
 }
 

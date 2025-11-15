@@ -1,1 +1,22 @@
-venv
+# Arquivos de Cache e Temporários do Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ambientes Virtuais
+venv/
+env/
+
+# Configurações do Banco de Dados
+db.sqlite3
+
+# Arquivos de Mídia e Logs
+/logs/
+*.log
+
+# Arquivos de Configuração do Django (Opcional, se você usasse variáveis de ambiente)
+# local_settings.py
+
+# Arquivos do VS Code (Opcional)
+.vscode/
