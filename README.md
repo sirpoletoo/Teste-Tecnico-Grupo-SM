@@ -16,7 +16,7 @@
 #### Request
 
 #### Response
-´´´
+```
 HTTP 201 Created
 Allow: GET, POST, HEAD, OPTIONS
 Content-Type: application/json
@@ -29,7 +29,7 @@ Vary: Accept
     "criado_em": "2025-11-15T18:39:59.600111Z",
     "atualizado_em": "2025-11-15T18:39:59.600133Z"
 }
-´´´
+```
 
 
 # API
