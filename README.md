@@ -38,6 +38,7 @@ Windows (Cmd/Prompt de Comando): venv\Scripts\activate.bat
 #### Request
 POST/http://127.0.0.1:8000/api/treinadores/
     ```
+    
 
     {
     "nome": "Ash Ketchum",
