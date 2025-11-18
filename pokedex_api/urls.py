@@ -21,6 +21,5 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     # Inclui as URLs geradas pelo DRF Router da aplicação treinadores
-    path('api/', include('treinadores.urls')),
-    path('api/', include('pokemons,urls')),
+    path('api/', include('pokedex_api.api_urls')),
 ]

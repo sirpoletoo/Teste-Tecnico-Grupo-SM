@@ -22,7 +22,7 @@ Windows (Cmd/Prompt de Comando): venv\Scripts\activate.bat
 - Instalação do Django: pip install django
 - Instalação da lib do postgreSQL: pip install psycopg2-binary
 - Instalação do DRF: pip install djangorestframework
-
+- Instalação da lib requests: pip install requests
 ## 3. Instalar o PostGRES
 - Link do PostGRES: https://www.postgresql.org/download/
 
@@ -34,7 +34,7 @@ Windows (Cmd/Prompt de Comando): venv\Scripts\activate.bat
 
 # Exemplos de Requests e Responses
 ## Treinadores
-- [Collection Postman endpoints treinador](./collection/Endpoints%20Treinador%20-%20postman_collection.json)
+- [Collection Postman endpoints treinador](collectionEndpoints%20Treinador%20-%20postman_collection.json)
 ### Adicionar Treinador
 #### Request
 POST/http://127.0.0.1:8000/api/treinadores/
@@ -61,6 +61,22 @@ POST/http://127.0.0.1:8000/api/treinadores/
         "atualizado_em": "2025-11-15T18:39:59.600133Z"
     }
     ```
+## Pokémons
+- TBD Collection Pokémon Postman
+### Adicionar Pokémon
+#### Request
+POST http://127.0.0.1:8000/api/pokemons/
+{"nome": "pikachu"}
+#### Response
+{
+    "id": 4,
+    "nome": "bulbasaur",
+    "foto": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png",
+    "altura": 7,
+    "peso": 69,
+    "criado_em": "2025-11-18T00:55:47.478232Z",
+    "atualizado_em": "2025-11-18T00:55:47.478245Z"
+}
 
 # API
 ## Pokemon API
