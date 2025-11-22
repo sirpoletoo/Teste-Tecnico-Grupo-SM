@@ -22,4 +22,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     # Inclui as URLs geradas pelo DRF Router da aplicação treinadores
     path('api/', include('pokedex_api.api_urls')),
+    path('api/', include('batalhas.urls')),
 ]

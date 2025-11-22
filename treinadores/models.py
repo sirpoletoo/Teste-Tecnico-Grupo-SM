@@ -21,6 +21,11 @@ class Treinador(models.Model):
         auto_now=True,
         help_text="Data da última atualização do registro."
     )
+    pokemons = models.ManyToManyField(
+        'pokemons.Pokemon',
+        blank=True, # permite criar um treinador sem pokémon
+        related_name='treinadores'
+    )
 
     class Meta:
         verbose_name = "Treinador"

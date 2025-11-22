@@ -39,6 +39,6 @@ class PokeAPIService:
         # Extrair e retornar os dados
         return {
             'foto': data['sprites']['front_default'],
-            'altura': data['height'],
-            'peso': data['weight']
+            'altura': data['height'], # CM
+            'peso': data['weight'] # HECTOGRAMAS
         }
