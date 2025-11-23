@@ -1,4 +1,5 @@
 import requests
+import unicodedata
 
 class PokeAPIService:
     """
@@ -12,8 +13,8 @@ class PokeAPIService:
         Retorna foto, altura e peso.
         Devolve uma mensagem de erro caso o Pokemon não seja encontrado
         """
-
-        nome_formatado = nome_pokemon.lower()
+        # tratamento de dados no nome do pokémon, para tirar os acentos e deixar em minúsculo
+        nome_formatado = unicodedata.normalize('NFKD', nome_pokemon).encode('ASCII', 'ignore').decode('utf-8').lower().strip()
         url = f"{self.BASE_URL}{nome_formatado}/"
 
         try:
@@ -28,11 +29,11 @@ class PokeAPIService:
                 raise ValueError(f"Pokémon '{nome_pokemon}' não encontrado na PokeAPI")
             
             # Trata os demais erros
-            raise ConnectionError(f"Erro ao conectar na PokeAPI: {e}")
+            response.raise_for_status()
         
         except requests.exceptions.RequestException as e:
             # Trata erros de conexão
-            raise ConnectionError(f"Erro de rede ao buscar Pokémon: {e}")
+            raise ConnectionError(f"Erro de comunicação com a PokeAPI (Status {response.status_code}). Verifique se o nome '{nome_pokemon}' é válido.")
         
         data = response.json()
 
