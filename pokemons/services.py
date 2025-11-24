@@ -15,6 +15,8 @@ class PokeAPIService:
         """
         # tratamento de dados no nome do pokémon, para tirar os acentos e deixar em minúsculo
         nome_formatado = unicodedata.normalize('NFKD', nome_pokemon).encode('ASCII', 'ignore').decode('utf-8').lower().strip()
+        
+        # request para a pokeapi
         url = f"{self.BASE_URL}{nome_formatado}/"
 
         try:
@@ -39,6 +41,7 @@ class PokeAPIService:
 
         # Extrair e retornar os dados
         return {
+            'nome': nome_formatado,
             'foto': data['sprites']['front_default'],
             'altura': data['height'], # CM
             'peso': data['weight'] # HECTOGRAMAS

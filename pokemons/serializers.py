@@ -32,9 +32,9 @@ class PokemonSerializer(serializers.ModelSerializer):
             raise serializers.ValidationError({'detalhe': f"Falha na comunicação externa: {e}"})
         
         # Combina os dados (nome original + dados da API)
-        validated_data.update(dados_pokeapi)
+        # validated_data.update(dados_pokeapi)
 
-        return super().create(validated_data)
+        return super().create(dados_pokeapi)
     
     def update(self, instance, validated_data):
         """
@@ -57,6 +57,6 @@ class PokemonSerializer(serializers.ModelSerializer):
             except ConnectionError as e:
                 raise serializers.ValidationError({'detalhe': f"Falha na comunicação externa: {e}"})
             
-            validated_data.update(dados_pokeapi)
+            # validated_data.update(dados_pokeapi)
         return super().update(instance, validated_data)
 
