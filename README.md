@@ -19,20 +19,26 @@ Rodar todos os comandos no terminal
 macOS/Linux: source venv/bin/activate
 Windows (PowerShell): .\venv\Scripts\Activate.ps1
 Windows (Cmd/Prompt de Comando): venv\Scripts\activate.bat
-- Instalação do Django: pip install django
-- Instalação da lib do postgreSQL: pip install psycopg2-binary
-- Instalação do DRF: pip install djangorestframework
-- Instalação da lib requests: pip install requests
+- Instalar as dependências: pip install -r requirements.txt
+    - Instalação do Django: pip install django
+    - Instalação da lib do postgreSQL: pip install psycopg2-binary
+    - Instalação do DRF: pip install djangorestframework
+    - Instalação da lib requests: pip install requests
 ## 3. Instalar o PostGRES
 - Link do PostGRES: https://www.postgresql.org/download/
 
 ## 4. Instalar o Postman
 - [Link para o Postman](https://www.postman.com/downloads/)
 
-## 5. Rodar o Projeto
+## 5. Criar as tabelas e migrar as infos para o Banco de Dados
+- python manage.py migrate
+### Credenciais do PostGRES
+- As configurações de banco de dados estão no arquivo settings.py. Por favor, verifique se o USER, PASSWORD e PORT
+
+## 6. Rodar o Projeto
 - Para rodar o servidor e testar os endpoints: python manage.py runserver
 
-## 6. Para rodar os testes, use:
+## 7. Para rodar os testes, use:
 - python manage.py test
 
 # Exemplos de Requests e Responses
