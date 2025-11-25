@@ -30,13 +30,14 @@ Windows (Cmd/Prompt de Comando): venv\Scripts\activate.bat
 ## 4. Instalar o Postman
 - [Link para o Postman](https://www.postman.com/downloads/)
 
-## 5. Criar as tabelas e migrar as infos para o Banco de Dados
+## 5. Para configurar o banco de dados: 
+- createdb pokedex_db
 - python manage.py migrate
 ### Credenciais do PostGRES
 - As configurações de banco de dados estão no arquivo settings.py. Por favor, verifique se o USER, PASSWORD e PORT
 
 ## 6. Rodar o Projeto
-- Para rodar o servidor e testar os endpoints: python manage.py runserver
+- Para rodar o servidor: python manage.py runserver
 
 ## 7. Para rodar os testes, use:
 - python manage.py test
@@ -70,6 +71,36 @@ POST/http://127.0.0.1:8000/api/treinadores/
         "atualizado_em": "2025-11-15T18:39:59.600133Z"
     }
     ```
+### Adicionar Pokémon a um treinador
+#### Request 
+- POST http://127.0.0.1:8000/api/treinadores/1/adicionar_pokemon/
+```
+{
+    "pokemon_id": 4
+}
+```
+#### Response
+```
+    {
+    "mensagem": "bulbasaur adicionado à equipe do(a) Guilherme!"
+    }
+```
+#### Remover Pokémon de um treinador
+#### Request 
+- POST http://127.0.0.1:8000/api/treinadores/1/remover_pokemon/
+```
+{
+    "pokemon_id": 5
+}
+```
+#### Response
+```
+{
+    "mensagem": "flabebe foi removido da equipe do(a) Guilherme"
+}
+```
+
+
 ## Pokémons
 - TBD Collection Pokémon Postman
 ### Adicionar Pokémon
@@ -89,6 +120,31 @@ POST/http://127.0.0.1:8000/api/treinadores/
 }
 ```
 
+## Batalhas
+
+### Batalhar
+#### Request
+- POST http://127.0.0.1:8000/api/batalhar/
+```
+    {"pokemon1_id": 7,
+    "pokemon2_id": 6
+    }
+```
+#### Response
+```
+    {
+    "pokemon_1": {
+        "nome": "Squirtle",
+        "peso": "90hg"
+    },
+    "pokemon_2": {
+        "nome": "Charmander",
+        "peso": "85hg"
+    },
+    "resultado": "Squirtle venceu Charmander nesse duelo eletrizante!",
+    "vencedor": "Squirtle"
+}
+```
 # API
 ## Pokemon API
 - https://pokeapi.co/
