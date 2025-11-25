@@ -102,7 +102,6 @@ POST/http://127.0.0.1:8000/api/treinadores/
 
 
 ## Pokémons
-- TBD Collection Pokémon Postman
 ### Adicionar Pokémon
 #### Request
 - POST http://127.0.0.1:8000/api/pokemons/
