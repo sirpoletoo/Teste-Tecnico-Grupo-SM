@@ -43,8 +43,8 @@ Windows (Cmd/Prompt de Comando): venv\Scripts\activate.bat
 - python manage.py test
 
 # Exemplos de Requests e Responses
+- Collection Postman com todos os endpoints - [text](<collection/Pokedex API - Teste Técnico.postman_collection.json>)
 ## Treinadores
-- [Collection Postman endpoints treinador](collectionEndpoints%20Treinador%20-%20postman_collection.json)
 ### Adicionar Treinador
 #### Request
 POST/http://127.0.0.1:8000/api/treinadores/
