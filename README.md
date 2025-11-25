@@ -74,9 +74,10 @@ POST/http://127.0.0.1:8000/api/treinadores/
 - TBD Collection Pokémon Postman
 ### Adicionar Pokémon
 #### Request
-POST http://127.0.0.1:8000/api/pokemons/
-{"nome": "pikachu"}
+- POST http://127.0.0.1:8000/api/pokemons/
+    {"nome": "pikachu"}
 #### Response
+```
 {
     "id": 4,
     "nome": "bulbasaur",
@@ -86,6 +87,7 @@ POST http://127.0.0.1:8000/api/pokemons/
     "criado_em": "2025-11-18T00:55:47.478232Z",
     "atualizado_em": "2025-11-18T00:55:47.478245Z"
 }
+```
 
 # API
 ## Pokemon API

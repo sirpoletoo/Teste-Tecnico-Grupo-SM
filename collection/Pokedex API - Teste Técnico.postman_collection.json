@@ -125,7 +125,7 @@
 			"name": "Pokémon",
 			"item": [
 				{
-					"name": "Buscar Pokémon",
+					"name": "Adicionar Pokémon",
 					"request": {
 						"method": "POST",
 						"header": [],
@@ -234,6 +234,98 @@
 					"request": {
 						"method": "GET",
 						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Batalha",
+			"item": [
+				{
+					"name": "Adicionar Pokémon ao Treinador",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"nome\": \"charizard\"}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/batalhar/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"batalhar",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Batalhar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"pokemon1_id\": 4,\r\n\"pokemon2_id\": 3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/batalhar/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"batalhar",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remover Pokémon do Treinador",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/treinadores/2/remover_pokemon/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"treinadores",
+								"2",
+								"remover_pokemon",
+								""
+							]
+						}
 					},
 					"response": []
 				}
