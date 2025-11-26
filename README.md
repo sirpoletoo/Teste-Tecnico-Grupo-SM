@@ -5,14 +5,16 @@ Ela define um conjunto de regras (como URLs, métodos HTTP e formato de dados) q
 
 No desenvolvimento web com Django, a API é o que permite que seu frontend (navegador/app) obtenha e envie dados para o backend (servidor Django).
 
-# o que é esse projeto?
+# O que é esse projeto?
 Este projeto é uma API RESTful de Pokédex desenvolvida como um desafio técnico, utilizando Python 3.11+, Django 5+ e Django Rest Framework. A aplicação gerencia o CRUD completo de Treinadores e Pokémons, implementando a relação muitos-para-muitos entre eles. Além disso, inclui a lógica de negócio para simulação de batalhas e integra-se à PokeAPI para enriquecimento de dados. Os dados são persistidos utilizando PostgreSQL.
-
+O projeto foi desenvolvido pelo VSCode mas você pode usar sua IDE de preferência. =)
 # Como rodar o Projeto
-## 1. Instalar o Python
+## 1. Clonar o repositório do Github
+- >git clone https://github.com/sirpoletoo/Teste-Tecnico-Grupo-SM
+## 2. Instalar o Python
 - Link do Python 3.11: https://www.python.org/downloads/
 
-## 2. Instalar o Django e criando o ambiente virtual
+## 3. Instalar as Dependencias e criando o ambiente virtual
 Rodar todos os comandos no terminal
 - Criação do ambiente virtual: python -m venv venv
 - Ativação do Ambiente Virtual:
@@ -24,26 +26,26 @@ Windows (Cmd/Prompt de Comando): venv\Scripts\activate.bat
     - Instalação da lib do postgreSQL: pip install psycopg2-binary
     - Instalação do DRF: pip install djangorestframework
     - Instalação da lib requests: pip install requests
-## 3. Instalar o PostGRES
+## 4. Instalar o PostGRES
 - Link do PostGRES: https://www.postgresql.org/download/
 
-## 4. Instalar o Postman
+## 5. Instalar o Postman
 - [Link para o Postman](https://www.postman.com/downloads/)
 
-## 5. Para configurar o banco de dados: 
+## 6. Para configurar o banco de dados: 
 - createdb pokedex_db
 - python manage.py migrate
 ### Credenciais do PostGRES
 - As configurações de banco de dados estão no arquivo settings.py. Por favor, verifique se o USER, PASSWORD e PORT
 
-## 6. Rodar o Projeto
+## 7. Rodar o Projeto
 - Para rodar o servidor: python manage.py runserver
 
-## 7. Para rodar os testes, use:
+## 8. Para rodar os testes, use:
 - python manage.py test
 
 # Exemplos de Requests e Responses
-- Collection Postman com todos os endpoints - [Collection postman](<collection/Pokedex API - Teste Técnico.postman_collection.json>)
+- Collection Postman com todos os endpoints - [Collection Postman](<collection/Pokedex API - Teste Técnico.postman_collection.json>)
 ## Treinadores
 ### Adicionar Treinador
 #### Request
